@@ -4,8 +4,11 @@ defmodule AppupPlayground.Application do
   @moduledoc false
 
   use Application
+  require Logger
 
   def start(_type, _args) do
+    Logger.debug("Application starting: #{__MODULE__}")
+
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: AppupPlayground.Worker.start_link(arg)
