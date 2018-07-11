@@ -10,7 +10,9 @@ defmodule AppupPlayground.NestedSupervisor do
   def init(_args) do
     Logger.debug("Supervisor starting: #{__MODULE__}")
 
-    children = []
+    children = [
+      AppupPlayground.Worker
+    ]
 
     Supervisor.init(children, strategy: :one_for_one)
   end
