@@ -14,7 +14,7 @@ defmodule AppupPlayground.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :observer, :runtime_tools, :wx],
       mod: {AppupPlayground.Application, []}
     ]
   end
